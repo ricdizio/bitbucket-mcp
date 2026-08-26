@@ -49,7 +49,7 @@ const manifest = {
       },
       BITBUCKET_ENABLE_DANGEROUS: {
         type: 'string',
-        description: 'Set to true to enable dangerous tools (e.g., deletions)'
+        description: 'Set to true to enable write-capable tools (create/update/merge/delete/etc.)'
       },
       BITBUCKET_LOG_DISABLE: {
         type: 'string',
