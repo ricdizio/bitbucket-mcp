@@ -4819,6 +4819,9 @@ class BitbucketServer {
         ],
       };
     } catch (error) {
+      if (error instanceof McpError) {
+        throw error;
+      }
       logger.error("Error getting pull request task", {
         error,
         workspace,
@@ -4864,6 +4867,9 @@ class BitbucketServer {
         ],
       };
     } catch (error) {
+      if (error instanceof McpError) {
+        throw error;
+      }
       logger.error("Error updating pull request task", {
         error,
         workspace,
@@ -4901,6 +4907,9 @@ class BitbucketServer {
         content: [{ type: "text", text: "Task deleted successfully." }],
       };
     } catch (error) {
+      if (error instanceof McpError) {
+        throw error;
+      }
       logger.error("Error deleting pull request task", {
         error,
         workspace,
